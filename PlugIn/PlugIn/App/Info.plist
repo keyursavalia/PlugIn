@@ -1,0 +1,21 @@
+{
+	"NSLocationWhenInUseUsageDescription" = "We need your location to find nearby EV chargers.";
+	CFBundlePackageType = "$(PRODUCT_BUNDLE_PACKAGE_TYPE)";
+	CFBundleExecutable = "$(EXECUTABLE_NAME)";
+	CFBundleName = "$(PRODUCT_NAME)";
+	"CFBundleShortVersionString" = "1.0";
+	"UISupportedInterfaceOrientations" = (
+		"UIInterfaceOrientationPortrait",
+	);
+	CFBundleIdentifier = "com.keyursavalia.Plug-In";
+	CFBundleDisplayName = "Plug In";
+	CFBundleVersion = 1;
+	UILaunchScreen = {
+		UIImageName = LaunchImage;
+		UIColorName = "";
+		"UIImageRespectsSafeAreaInsets" = YES;
+	};
+	"UIRequiredDeviceCapabilities" = (
+		armv7,
+	);
+}
