@@ -1,0 +1,107 @@
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+# Xcode Patch
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Build generated
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+# Package.resolved  # Uncomment to ignore; many teams commit it for reproducible builds
+
+# CocoaPods
+Pods/
+*.xcworkspace
+!default.xcworkspace
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# Accio dependency management
+.accio/
+
+# Tuist
+.tuist/
+
+# Bazel
+bazel-*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.vscode/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.xcconfig
+!default.xcconfig
+
+# GoogleService-Info.plist
+**/GoogleService-Info.plist
+
+# Crashlytics
+crashlytics-build.properties
+crashlytics.properties
+
+# Code coverage
+*.gcda
+*.gcno
+coverage/
+*.profdata
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
