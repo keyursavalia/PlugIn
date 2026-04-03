@@ -20,8 +20,13 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 
 ### **Key Screens**
 
+<div align="center">
+
 **Screenshot 1: Driver Map View**
+
 <img src="PlugIn/Screenshots/1.png" width="320" alt="Driver Map View" />
+
+</div>
 
 - Interactive map showing real-time charger locations with green pins
 - Each pin displays available credits/hour for the charger
@@ -30,8 +35,13 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - Location indicator showing user's current position
 - Tab navigation showing Map, Charger, and Profile tabs
 
+<div align="center">
+
 **Screenshot 2: Charger Detail View**
+
 <img src="PlugIn/Screenshots/2.png" width="320" alt="Charger Details" />
+
+</div>
 
 - Detailed charger information (type: DC Fast Charge, connector: J1772 Type I)
 - Charger specifications (max speed: 156.6 kW)
@@ -40,8 +50,13 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - "Request Charge" button to initiate a booking
 - Map preview showing exact charger location
 
+<div align="center">
+
 **Screenshot 3: Add Charger - Location Details**
+
 <img src="PlugIn/Screenshots/3.png" width="320" alt="Add Charger Location" />
+
+</div>
 
 - Host dashboard header with "Add Charger" option
 - Map displaying charger location with placement pin
@@ -51,8 +66,13 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - Hardware specifications section (Charger Type: Level 2, Max Speed: 7.2 kW)
 - Connector Type dropdown for selecting compatible connectors
 
+<div align="center">
+
 **Screenshot 4: Location Picker**
+
 <img src="PlugIn/Screenshots/4.png" width="320" alt="Select Location" />
+
+</div>
 
 - Interactive map for precise charger location placement
 - Green + marker showing selected position
@@ -61,8 +81,13 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - "Go to My Location" button to place at current GPS location
 - Clean, intuitive interface for location selection
 
+<div align="center">
+
 **Screenshot 5: Host Dashboard**
+
 <img src="PlugIn/Screenshots/5.png" width="320" alt="Host Dashboard" />
+
+</div>
 
 - "HOST MODE" header with "Dashboard" title
 - Bell icon for incoming request notifications
@@ -75,8 +100,13 @@ A native iOS application that connects electric vehicle drivers with EV charger 
   - Delete button with destructive styling (red)
 - Bottom tab navigation (Map, Charger, Profile)
 
+<div align="center">
+
 **Screenshot 6: Add Credits**
+
 <img src="PlugIn/Screenshots/6.png" width="320" alt="Buy Credits" />
+
+</div>
 
 - Credit purchase packages with different tiers:
   - 10 Credits for $4.99 (entry level)
