@@ -21,7 +21,8 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 ### **Key Screens**
 
 **Screenshot 1: Driver Map View**
-![Driver Map View](PlugIn/Screenshots/1.png)
+<img src="PlugIn/Screenshots/1.png" width="320" alt="Driver Map View" />
+
 - Interactive map showing real-time charger locations with green pins
 - Each pin displays available credits/hour for the charger
 - Search location bar at the top for finding specific areas
@@ -30,7 +31,8 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - Tab navigation showing Map, Charger, and Profile tabs
 
 **Screenshot 2: Charger Detail View**
-![Charger Details](PlugIn/Screenshots/2.png)
+<img src="PlugIn/Screenshots/2.png" width="320" alt="Charger Details" />
+
 - Detailed charger information (type: DC Fast Charge, connector: J1772 Type I)
 - Charger specifications (max speed: 156.6 kW)
 - Host address and distance from current location
@@ -39,7 +41,8 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - Map preview showing exact charger location
 
 **Screenshot 3: Add Charger - Location Details**
-![Add Charger Location](PlugIn/Screenshots/3.png)
+<img src="PlugIn/Screenshots/3.png" width="320" alt="Add Charger Location" />
+
 - Host dashboard header with "Add Charger" option
 - Map displaying charger location with placement pin
 - Street address field pre-populated with detected location
@@ -49,7 +52,8 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - Connector Type dropdown for selecting compatible connectors
 
 **Screenshot 4: Location Picker**
-![Select Location](PlugIn/Screenshots/4.png)
+<img src="PlugIn/Screenshots/4.png" width="320" alt="Select Location" />
+
 - Interactive map for precise charger location placement
 - Green + marker showing selected position
 - Instruction text: "Tap anywhere on the map to place your charger pin"
@@ -58,7 +62,8 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - Clean, intuitive interface for location selection
 
 **Screenshot 5: Host Dashboard**
-![Host Dashboard](PlugIn/Screenshots/5.png)
+<img src="PlugIn/Screenshots/5.png" width="320" alt="Host Dashboard" />
+
 - "HOST MODE" header with "Dashboard" title
 - Bell icon for incoming request notifications
 - List of registered chargers with cards showing:
@@ -71,7 +76,8 @@ A native iOS application that connects electric vehicle drivers with EV charger 
 - Bottom tab navigation (Map, Charger, Profile)
 
 **Screenshot 6: Add Credits**
-![Buy Credits](PlugIn/Screenshots/6.png)
+<img src="PlugIn/Screenshots/6.png" width="320" alt="Buy Credits" />
+
 - Credit purchase packages with different tiers:
   - 10 Credits for $4.99 (entry level)
   - 30 Credits for $9.99 (25% bonus credits)
