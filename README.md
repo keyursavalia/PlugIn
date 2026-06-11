@@ -109,3 +109,100 @@ A booking in PlugIn moves through a five-state lifecycle: **pending → accepted
 | **Image Storage** | `FirebaseStorageService` — async upload/download with progress state |
 | **Deployment Target** | iOS 16+ |
 | **Dependencies** | Firebase iOS SDK (Swift Package Manager) |
+
+---
+
+## Project Structure
+
+```
+PlugIn/
+├── App/
+│   ├── PlugInApp.swift              ← @main, Firebase setup, environment object injection
+│   └── AppDelegate.swift            ← Portrait orientation lock for iPhone and iPad
+│
+├── Configuration/
+│   └── Config.swift                 ← Firebase project config and environment constants
+│
+├── Core/
+│   ├── Navigation/
+│   │   ├── AppCoordinator.swift     ← @ObservableObject: centralized navigation and sheet routing
+│   │   └── NavigationDestination.swift  ← Type-safe enum of all navigable screens
+│   │
+│   ├── Services/
+│   │   ├── Firebase/
+│   │   │   ├── AuthService.swift           ← Persistent auth state listener, role promotion
+│   │   │   ├── FirestoreService.swift      ← Centralized Firestore read/write operations
+│   │   │   └── FirebaseStorageService.swift ← Async image upload and download
+│   │   └── Location/
+│   │       └── LocationService.swift       ← CoreLocation wrapper, distance filtering
+│   │
+│   ├── Components/
+│   │   └── ImagePicker.swift        ← UIViewRepresentable photo library picker
+│   │
+│   └── Utilities/
+│       ├── Extensions/              ← String, View, Date, Color, Double, TimeInterval
+│       ├── Helpers/
+│       │   ├── ValidationHelper.swift     ← Form field validation logic
+│       │   └── FormattingHelper.swift     ← Credit and distance formatting
+│       ├── Constants.swift
+│       └── ErrorHandling.swift
+│
+├── Domain/
+│   ├── Models/
+│   │   ├── User.swift               ← Roles array, greenCredits, host verification flags
+│   │   ├── Charger.swift            ← Hardware specs, availability schedule, isAvailable(at:)
+│   │   └── Booking.swift            ← Five-state lifecycle, timestamps, credit tracking
+│   │
+│   ├── Enums/
+│   │   ├── UserRole.swift           ← .driver / .host
+│   │   ├── ChargerType.swift        ← Level1 / Level2 / DCFastCharging
+│   │   ├── ConnectorType.swift      ← Tesla / CCS / CHAdeMO / J1772
+│   │   ├── ChargerStatus.swift      ← Active / Inactive / Maintenance
+│   │   └── BookingStatus.swift      ← Pending / Accepted / Active / Completed / Cancelled
+│   │
+│   └── Repositories/
+│       ├── ChargerRepository.swift  ← Firestore CRUD + snapshot listener for charger list
+│       └── BookingRepository.swift  ← Firestore CRUD + snapshot listener for booking updates
+│
+├── ViewModel/
+│   ├── Authentication/
+│   │   └── AuthViewModel.swift
+│   ├── Driver/
+│   │   └── DriverMapViewModel.swift ← Live charger list, applyFilters(), distance sort
+│   ├── Booking/
+│   │   └── BookingViewModel.swift   ← Request creation, state transitions
+│   ├── HostDashboard/
+│   │   └── HostDashboardViewModel.swift ← Charger management, request counts
+│   ├── Request/
+│   │   └── RequestViewModel.swift   ← Accept/decline, real-time request list
+│   └── AddCharger/
+│       └── AddChargerViewModel.swift ← Multi-step charger registration, location picker
+│
+└── Views/
+    ├── Root/
+    │   ├── RootView.swift           ← Auth gate → MainTabView
+    │   └── MainTabView.swift        ← Driver map tab or Host dashboard tab based on active role
+    ├── Authentication/              ← Sign-up and sign-in flows
+    ├── Driver/
+    │   ├── DriverMapView.swift      ← MapKit map with ChargerPinView annotations
+    │   ├── ChargerDetailSheet.swift ← Bottom sheet with specs and Request Charge button
+    │   ├── FilterSheet.swift        ← Multi-criteria filter panel
+    │   └── SearchBar.swift
+    ├── Booking/                     ← BookingRequestView, confirmation, request-sent states
+    ├── AddCharger/                  ← Multi-step registration: type → location → schedule → price
+    ├── HostDashboard/
+    │   └── HostDashboardView.swift  ← Charger list cards with analytics and incoming request bell
+    ├── Request/
+    │   └── IncomingRequestSheet.swift ← Real-time accept/decline sheet
+    ├── Profile/
+    │   ├── ProfileView.swift        ← Photo, credits balance, booking history link
+    │   ├── AddCreditsView.swift     ← Tiered credit packages with purchase flow
+    │   ├── PastRequestsView.swift   ← Booking history grouped by date
+    │   ├── AccountSettingsView.swift
+    │   ├── PrivacySettingsView.swift
+    │   └── AboutView.swift
+    └── Common/Components/           ← PrimaryButton, SecondaryButton, DestructiveButton,
+                                       CustomTextField, CustomDropdown, StatusBadge,
+                                       VerifiedBadge, ChargerCard, StatsCard,
+                                       LoadingView, SkeletonView, ErrorView, EmptyStateView
+```
