@@ -39,3 +39,35 @@ PlugIn is a two-sided marketplace for EV charging. Every user is both a potentia
 The green credits economy keeps both sides engaged: drivers buy credits in tiered packages, hosts earn credits per session, and every exchange happens without a traditional payment flow at the point of charging.
 
 No account required beyond email. No subscriptions. Everything persists in the cloud via Firestore and is fully real-time across devices.
+
+---
+
+## Features
+
+### For Drivers
+
+- **Live Map Discovery** — MapKit map populated with real-time charger pins; each pin displays the host's credits-per-hour rate at a glance
+- **Advanced Filtering** — filter by charger type (Level 1 / Level 2 / DC Fast Charging), connector standard (Tesla / CCS / CHAdeMO / J1772), maximum credits per hour, and live availability based on the host's weekly schedule
+- **Charger Detail Sheet** — hardware specs, max charging speed, host rating, access instructions, and a map thumbnail in a single bottom sheet
+- **Booking Request Flow** — pick an estimated duration, confirm the credit cost, and submit; request status updates in real time
+- **Green Credits Wallet** — purchase credits in tiered packages (10 / 30 / 65 / 130 credits); current balance visible on the profile tab at all times
+- **Booking History** — all past requests grouped by date with full status tracking (pending → accepted → active → completed / cancelled)
+- **Charger Ratings** — rate sessions after completion; ratings aggregate on the host's charger card
+- **Profile Management** — upload a photo, update account details, manage privacy settings, and control location sharing
+
+### For Hosts
+
+- **Charger Registration** — register a charger with type, connector, max speed, cable type, access instructions, and a pin-drop or GPS-snap location picker
+- **Availability Scheduling** — set per-day start and end hours for each day of the week; disable specific days with a single toggle
+- **Host Dashboard** — overview of all registered chargers with live availability toggles, booking counts, credits earned, and quick edit and delete controls
+- **Incoming Requests Sheet** — real-time notification badge; one-tap accept or decline directly from the sheet without leaving the dashboard
+- **Pricing Control** — set a custom credits-per-hour rate independently for each charger
+- **Host Verification Badge** — verified hosts display a badge on their charger cards to build trust with drivers
+
+### Core Platform Features
+
+- **Firebase Authentication** — email and password sign-up and sign-in with persistent session state across app launches
+- **Real-time Firestore Sync** — snapshot listeners in repositories and services propagate changes to both parties the moment they happen
+- **Photo Storage** — Firebase Storage for profile photos and future charger images, with async upload progress and graceful error handling
+- **Dual-role Accounts** — a single account can hold both the driver and host roles; adding a first charger promotes the account to host automatically; the tab bar adapts to show the driver map or host dashboard depending on which role is active
+- **Portrait Lock** — consistent portrait-only orientation enforced via `AppDelegate` across both iPhone and iPad
