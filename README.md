@@ -71,3 +71,21 @@ No account required beyond email. No subscriptions. Everything persists in the c
 - **Photo Storage** — Firebase Storage for profile photos and future charger images, with async upload progress and graceful error handling
 - **Dual-role Accounts** — a single account can hold both the driver and host roles; adding a first charger promotes the account to host automatically; the tab bar adapts to show the driver map or host dashboard depending on which role is active
 - **Portrait Lock** — consistent portrait-only orientation enforced via `AppDelegate` across both iPhone and iPad
+
+---
+
+## How the Booking Flow Works
+
+A booking in PlugIn moves through a five-state lifecycle: **pending → accepted → active → completed** (or **cancelled** at any stage). Here is what happens at each step.
+
+1. **Request** — the driver taps *Request Charge* on a charger detail sheet, picks an estimated session duration, reviews the credit cost, and confirms. A `Booking` document is written to Firestore with `status: pending` and a `requestedAt` timestamp. The driver's credit balance is not deducted yet.
+
+2. **Notification** — Firestore's real-time listener on the host's dashboard surfaces the incoming request immediately. A bell icon on the Host Dashboard badge-counts unreviewed requests without requiring a push notification infrastructure.
+
+3. **Accept or Decline** — the host opens the Incoming Requests sheet and taps accept or decline. Accepting sets `status: accepted` and writes an `acceptedAt` timestamp. Declining sets `status: cancelled`. Both state changes propagate to the driver's booking history in real time.
+
+4. **Active Session** — once accepted, the booking transitions to `active` when the session starts. The `isActive` computed property (`status == .accepted || status == .active`) gates UI that should only be visible during a live session.
+
+5. **Completion & Credits** — when the session ends, `status` becomes `completed`, an `endedAt` timestamp is written, `creditsUsed` is recorded, and both parties are prompted to rate each other. Credit deduction from the driver and credit award to the host happen at this step.
+
+**Availability enforcement** runs before step 1. The `Charger.isAvailable(at:)` method checks the host's weekly schedule in `availabilitySchedule` and the charger's `status` field. Chargers that fail this check are excluded from the driver's map by `DriverMapViewModel.applyFilters()` before any pin is rendered, so drivers can never request a booking on an unavailable charger.
