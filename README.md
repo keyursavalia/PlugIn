@@ -250,3 +250,15 @@ The Firebase iOS SDK is managed via Swift Package Manager and resolves automatic
 - **Unit and UI tests** — XCTest suite covering the booking state machine, filter logic, and credit calculation; UI tests for the critical driver and host flows
 - **Dark mode** — full dark-mode pass across the SwiftUI component library
 - **CI/CD pipeline** — GitHub Actions workflow for build verification and test runs on every pull request
+
+---
+
+## Contributing
+
+Fork the repo, branch from `main`, one fix or feature per PR. Commit prefixes: `init:` / `add:` / `update:` / `fix:`. Bug reports and ideas are welcome as GitHub issues.
+
+---
+
+## License
+
+[MIT](LICENSE) · © 2026 Keyur Savalia
