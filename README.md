@@ -206,3 +206,33 @@ PlugIn/
                                        VerifiedBadge, ChargerCard, StatsCard,
                                        LoadingView, SkeletonView, ErrorView, EmptyStateView
 ```
+
+---
+
+## Getting Started
+
+**Requirements:** Xcode 15+, an iOS 16 simulator or device, and a Firebase project with Auth, Firestore, and Storage enabled.
+
+```bash
+git clone https://github.com/keyursavalia/PlugIn.git
+cd PlugIn
+open PlugIn/PlugIn.xcworkspace
+```
+
+**Firebase setup:**
+
+1. Create a project at [console.firebase.google.com](https://console.firebase.google.com).
+2. Enable **Email/Password** under Authentication → Sign-in method.
+3. Create a **Firestore** database in test mode.
+4. Enable **Firebase Storage**.
+5. Download the `GoogleService-Info.plist` and drag it into the `PlugIn/PlugIn/` folder in Xcode — do not add it to source control.
+
+The Firebase iOS SDK is managed via Swift Package Manager and resolves automatically when you open the workspace. Press `Cmd R` to build and run. Both the driver map and host dashboard are accessible from a single account — add a charger to activate the host role.
+
+**Firestore collections used:**
+
+| Collection | Purpose |
+|---|---|
+| `users` | User profiles, roles array, green credits balance |
+| `chargers` | Charger documents with GeoPoint, specs, and availability schedule |
+| `bookings` | Booking lifecycle documents with status and timestamps |
