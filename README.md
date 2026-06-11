@@ -236,3 +236,17 @@ The Firebase iOS SDK is managed via Swift Package Manager and resolves automatic
 | `users` | User profiles, roles array, green credits balance |
 | `chargers` | Charger documents with GeoPoint, specs, and availability schedule |
 | `bookings` | Booking lifecycle documents with status and timestamps |
+
+---
+
+## What's Next
+
+- **Push notifications** — APNs integration so hosts receive a lock-screen alert the moment a booking request arrives, not just an in-app badge
+- **In-app messaging** — a lightweight chat thread between driver and host tied to a booking, for access instructions and coordination
+- **Payment integration** — Stripe or Apple Pay to replace the demo credit-purchase flow with a real transaction layer
+- **Review system with photos** — allow both parties to leave a written review and attach a photo alongside the star rating
+- **Charger availability calendar** — a weekly calendar view for hosts to manage schedule exceptions (holidays, temporary unavailability) without editing the base schedule
+- **Offline mode** — local cache for the charger list so drivers can browse previously loaded pins when connectivity drops
+- **Unit and UI tests** — XCTest suite covering the booking state machine, filter logic, and credit calculation; UI tests for the critical driver and host flows
+- **Dark mode** — full dark-mode pass across the SwiftUI component library
+- **CI/CD pipeline** — GitHub Actions workflow for build verification and test runs on every pull request
