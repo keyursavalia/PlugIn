@@ -89,3 +89,23 @@ A booking in PlugIn moves through a five-state lifecycle: **pending → accepted
 5. **Completion & Credits** — when the session ends, `status` becomes `completed`, an `endedAt` timestamp is written, `creditsUsed` is recorded, and both parties are prompted to rate each other. Credit deduction from the driver and credit award to the host happen at this step.
 
 **Availability enforcement** runs before step 1. The `Charger.isAvailable(at:)` method checks the host's weekly schedule in `availabilitySchedule` and the charger's `status` field. Chargers that fail this check are excluded from the driver's map by `DriverMapViewModel.applyFilters()` before any pin is rendered, so drivers can never request a booking on an unavailable charger.
+
+---
+
+## Tech Stack
+
+| | |
+|---|---|
+| **Language** | Swift |
+| **UI Framework** | SwiftUI — `@Published` / `@ObservedObject` throughout |
+| **Maps** | MapKit — `Map`, custom pin annotations via `ChargerPinView` |
+| **Backend** | Firebase — Auth, Firestore, Storage |
+| **Real-time Sync** | Firestore snapshot listeners in `ChargerRepository` and `BookingRepository` |
+| **Location** | CoreLocation — live GPS for distance calculation and charger placement |
+| **Concurrency** | Combine — reactive data binding; `@MainActor` dispatch for UI-safe Firestore callbacks |
+| **Architecture** | Clean Architecture — MVVM + Repository + Coordinator + Service layers |
+| **State** | `@StateObject` / `@EnvironmentObject` for `AuthService`, `LocationService`, `AppCoordinator` |
+| **Navigation** | `AppCoordinator` with type-safe `NavigationDestination` enum |
+| **Image Storage** | `FirebaseStorageService` — async upload/download with progress state |
+| **Deployment Target** | iOS 16+ |
+| **Dependencies** | Firebase iOS SDK (Swift Package Manager) |
