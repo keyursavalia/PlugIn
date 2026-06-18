@@ -18,7 +18,7 @@
 
 <p align="center">
   <a href="https://youtu.be/Xc5KtwcJPWE">
-    <img src="https://img.shields.io/badge/▶%20Watch%20Demo-YouTube-red?style=flat-square&logo=youtube" alt="Watch Demo on YouTube" />
+    <img src="https://img.youtube.com/vi/Xc5KtwcJPWE/maxresdefault.jpg" alt="Watch PlugIn Demo on YouTube" width="600" />
   </a>
 </p>
 
