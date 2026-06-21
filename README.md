@@ -18,7 +18,7 @@
 
 <p align="center">
   <a href="https://youtu.be/Xc5KtwcJPWE">
-    <img src="https://img.youtube.com/vi/Xc5KtwcJPWE/maxresdefault.jpg" alt="Watch PlugIn Demo on YouTube" width="600" />
+    <img src="https://ytcards.demolab.com/?id=Xc5KtwcJPWE&title=PlugIn+App+Demo&lang=en&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=560&border_radius=5" alt="Watch PlugIn Demo on YouTube" />
   </a>
 </p>
 
