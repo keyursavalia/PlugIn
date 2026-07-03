@@ -48,35 +48,6 @@ No account required beyond email. No subscriptions. Everything persists in the c
 
 ---
 
-## Screenshots
-
-### Driver — Map & Charger Discovery
-
-<table align="center"><tr>
-  <td align="center"><img src="PlugIn/Screenshots/1.png" width="185" alt="Driver map view" /><br/><sub>Live map with credits-per-hour pins</sub></td>
-  <td align="center"><img src="PlugIn/Screenshots/2.png" width="185" alt="Charger detail sheet" /><br/><sub>Charger specs and Request Charge</sub></td>
-</tr></table>
-
-<br/>
-
-### Host — Dashboard & Charger Registration
-
-<table align="center"><tr>
-  <td align="center"><img src="PlugIn/Screenshots/5.png" width="185" alt="Host dashboard" /><br/><sub>Charger list with availability toggles</sub></td>
-  <td align="center"><img src="PlugIn/Screenshots/3.png" width="185" alt="Add charger — location details" /><br/><sub>Hardware specs and location entry</sub></td>
-  <td align="center"><img src="PlugIn/Screenshots/4.png" width="185" alt="Map location picker" /><br/><sub>Pin-drop location picker</sub></td>
-</tr></table>
-
-<br/>
-
-### Credits
-
-<table align="center"><tr>
-  <td align="center"><img src="PlugIn/Screenshots/6.png" width="185" alt="Add credits" /><br/><sub>Tiered credit packages</sub></td>
-</tr></table>
-
----
-
 ## Features
 
 ### For Drivers
