@@ -64,7 +64,16 @@ No account required beyond email. No subscriptions. Everything persists in the c
 
 - **Charger Detail Sheet** — hardware specs, max charging speed, host rating, access instructions, and a map thumbnail in a single bottom sheet
 - **Booking Request Flow** — pick an estimated duration, confirm the credit cost, and submit; request status updates in real time
+### Driver — Green Credits
+
+<table align="center"><tr>
+  <td align="center"><img src="PlugIn/Screenshots/6.png" width="185" alt="Add credits" /><br/><sub>Tiered credit packages</sub></td>
+</tr></table>
+
 - **Green Credits Wallet** — purchase credits in tiered packages (10 / 30 / 65 / 130 credits); current balance visible on the profile tab at all times
+
+### Driver — Booking History, Ratings & Profile
+
 - **Booking History** — all past requests grouped by date with full status tracking (pending → accepted → active → completed / cancelled)
 - **Charger Ratings** — rate sessions after completion; ratings aggregate on the host's charger card
 - **Profile Management** — upload a photo, update account details, manage privacy settings, and control location sharing
