@@ -50,7 +50,11 @@ No account required beyond email. No subscriptions. Everything persists in the c
 
 ## Features
 
-### For Drivers
+### Driver — Map & Charger Discovery
+
+<table align="center"><tr>
+  <td align="center"><img src="PlugIn/Screenshots/1.png" width="185" alt="Driver map view" /><br/><sub>Live map with credits-per-hour pins</sub></td>
+</tr></table>
 
 - **Live Map Discovery** — MapKit map populated with real-time charger pins; each pin displays the host's credits-per-hour rate at a glance
 - **Advanced Filtering** — filter by charger type (Level 1 / Level 2 / DC Fast Charging), connector standard (Tesla / CCS / CHAdeMO / J1772), maximum credits per hour, and live availability based on the host's weekly schedule
