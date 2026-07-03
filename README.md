@@ -99,7 +99,7 @@ No account required beyond email. No subscriptions. Everything persists in the c
 - **Pricing Control** — set a custom credits-per-hour rate independently for each charger
 - **Host Verification Badge** — verified hosts display a badge on their charger cards to build trust with drivers
 
-### Core Platform Features
+### Core Platform
 
 - **Firebase Authentication** — email and password sign-up and sign-in with persistent session state across app launches
 - **Real-time Firestore Sync** — snapshot listeners in repositories and services propagate changes to both parties the moment they happen
