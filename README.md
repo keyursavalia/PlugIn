@@ -58,6 +58,10 @@ No account required beyond email. No subscriptions. Everything persists in the c
 
 - **Live Map Discovery** — MapKit map populated with real-time charger pins; each pin displays the host's credits-per-hour rate at a glance
 - **Advanced Filtering** — filter by charger type (Level 1 / Level 2 / DC Fast Charging), connector standard (Tesla / CCS / CHAdeMO / J1772), maximum credits per hour, and live availability based on the host's weekly schedule
+<table align="center"><tr>
+  <td align="center"><img src="PlugIn/Screenshots/2.png" width="185" alt="Charger detail sheet" /><br/><sub>Charger specs and Request Charge</sub></td>
+</tr></table>
+
 - **Charger Detail Sheet** — hardware specs, max charging speed, host rating, access instructions, and a map thumbnail in a single bottom sheet
 - **Booking Request Flow** — pick an estimated duration, confirm the credit cost, and submit; request status updates in real time
 - **Green Credits Wallet** — purchase credits in tiered packages (10 / 30 / 65 / 130 credits); current balance visible on the profile tab at all times
