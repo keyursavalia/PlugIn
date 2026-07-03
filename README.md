@@ -78,12 +78,24 @@ No account required beyond email. No subscriptions. Everything persists in the c
 - **Charger Ratings** — rate sessions after completion; ratings aggregate on the host's charger card
 - **Profile Management** — upload a photo, update account details, manage privacy settings, and control location sharing
 
-### For Hosts
+### Host — Dashboard & Incoming Requests
+
+<table align="center"><tr>
+  <td align="center"><img src="PlugIn/Screenshots/5.png" width="185" alt="Host dashboard" /><br/><sub>Charger list with availability toggles</sub></td>
+</tr></table>
+
+- **Host Dashboard** — overview of all registered chargers with live availability toggles, booking counts, credits earned, and quick edit and delete controls
+- **Incoming Requests Sheet** — real-time notification badge; one-tap accept or decline directly from the sheet without leaving the dashboard
+
+### Host — Charger Registration
+
+<table align="center"><tr>
+  <td align="center"><img src="PlugIn/Screenshots/3.png" width="185" alt="Add charger — location details" /><br/><sub>Hardware specs and location entry</sub></td>
+  <td align="center"><img src="PlugIn/Screenshots/4.png" width="185" alt="Map location picker" /><br/><sub>Pin-drop location picker</sub></td>
+</tr></table>
 
 - **Charger Registration** — register a charger with type, connector, max speed, cable type, access instructions, and a pin-drop or GPS-snap location picker
 - **Availability Scheduling** — set per-day start and end hours for each day of the week; disable specific days with a single toggle
-- **Host Dashboard** — overview of all registered chargers with live availability toggles, booking counts, credits earned, and quick edit and delete controls
-- **Incoming Requests Sheet** — real-time notification badge; one-tap accept or decline directly from the sheet without leaving the dashboard
 - **Pricing Control** — set a custom credits-per-hour rate independently for each charger
 - **Host Verification Badge** — verified hosts display a badge on their charger cards to build trust with drivers
 
